@@ -22,8 +22,8 @@ function verResultado() {
             volumenDiario = ( (peso * 4) + 7) / (peso + 90) * 1500;
         }
 
-        var mantenimiento = volumenDiario / 24;
-        var mm2 = mantenimiento + mantenimiento / 2;
+        var mantenimiento = (volumenDiario / 24).toFixed(1);
+        var mm2 = (mantenimiento + mantenimiento / 2).toFixed(1);
 
         // Modificar los valores de texto de los resultados y mostrarlos en pantalla
         var elemento1 = document.getElementById("flu");
