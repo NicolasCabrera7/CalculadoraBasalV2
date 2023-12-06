@@ -22,14 +22,14 @@ function verResultado() {
             volumenDiario = ( (peso * 4) + 7) / (peso + 90) * 1500;
         }
 
-        var mantenimiento = (volumenDiario / 24).toFixed(1);
-        var mm2 = (mantenimiento + mantenimiento / 2).toFixed(1);
+        var mantenimiento = volumenDiario / 24;
+        var mm2 = mantenimiento + mantenimiento / 2;
 
         // Modificar los valores de texto de los resultados y mostrarlos en pantalla
         var elemento1 = document.getElementById("flu");
         var elemento2 = document.getElementById("man");
-        elemento1.textContent = "Mantenimiento:  " + mantenimiento + "cc/hr";
-        elemento2.textContent = "m+m/2:  " + mm2 + "cc/hr";
+        elemento1.textContent = "Mantenimiento:  " + mantenimiento.toFixed(1) + "cc/hr";
+        elemento2.textContent = "m+m/2:  " + mm2.toFixed(1) + "cc/hr";
         elemento1.style.display = 'block';
         elemento2.style.display = 'block';
     } else {
